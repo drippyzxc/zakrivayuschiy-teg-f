@@ -4,26 +4,65 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
-@media (prefers-color-scheme: dark) {
-  :root.theme-dark {
-    --arrow-color: #007A0C;
-    --background-color: #000;
-    --background-header-title: #000;
-    --accent-color: #00CC14;
-    --linear-gradient-start: #007F0C;
-    --linear-gradient-end: #004306;
-    --color-sparks: #FF0000;
-  }
+:root.theme-light {
+  --arrow-color: #666666;
+  --background-color: #fff;
+  --background-header-title: #fff;
+  --background-color-mode: #fff;
+  --border-mode: #000;
+  --before-color: #fff;
+  --accent-color: #000;
+  --color-text-button: #000;
+  --linear-gradient-start: #E7E7E7;
+  --linear-gradient-end: #1A1A1A;
+  --color-sparks: #FF0000;
+  --color-mode: #fff;
 }
 
 @media (prefers-color-scheme: light) {
-  :root.theme-light {
+  :root {
     --arrow-color: #666666;
     --background-color: #fff;
     --background-header-title: #fff;
+    --background-color-mode: #fff;
+    --border-mode: #000;
     --accent-color: #000;
+    --color-text-button: #000;
     --linear-gradient-start: #E7E7E7;
     --linear-gradient-end: #1A1A1A;
     --color-sparks: #FF0000;
+    --color-mode: #fff;
+  }
+}
+
+:root.theme-dark {
+  --arrow-color: #007A0C;
+  --background-color: #000;
+  --background-header-title: #000;
+  --background-color-mode: #000;
+  --border-mode: #00CC14;
+  --before-color: #00CC14;
+  --accent-color: #00CC14;
+  --color-text-button: #00CC14;
+  --linear-gradient-start: #007F0C;
+  --linear-gradient-end: #004306;
+  --color-sparks: #FF0000;
+  --color-mode: #000;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --arrow-color: #007A0C;
+    --background-color: #000;
+    --background-header-title: #000;
+    --background-color-mode: #000;
+    --border-mode: #00CC14;
+    --before-color: #00CC14;
+    --accent-color: #00CC14;
+    --color-text-button: #00CC14;
+    --linear-gradient-start: #007F0C;
+    --linear-gradient-end: #004306;
+    --color-sparks: #FF0000;
+    --color-mode: #000;
   }
 }
