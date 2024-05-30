@@ -1,19 +1,18 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
   --main-family: "Inter", sans-serif;
-  --accent-family: "PressStart2P";
+  --accent-family: "PressStart2P", fantasy;
   --font-weight-main: 700;
-  --font-weight-second: 465;
+  --font-weight-second: 400;
   --arrow-color: #666666;
   --background-color: #fff;
   --background-header-title: #fff;
   --background-color-mode: #fff;
   --border-mode: #000;
-  --before-color: #fff;
+  --before-color: #000;
   --accent-color: #000;
-  --color-text-button: #000;
+  --color-text-button: #fff;
   --linear-gradient-start: #E7E7E7;
   --linear-gradient-end: #1A1A1A;
   --color-sparks: #FF0000;
-  --color-mode: #fff;
 }

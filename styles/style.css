@@ -75,7 +75,6 @@
   width: 100%;
   height: 38px;
   text-transform: uppercase;
-  color: var(--accent-color);
 }
 
 .header {
@@ -200,14 +199,15 @@ main {
   width: 100%;
   background-color: var(--background-header-title);
   border: 2px solid var(--accent-color);
-  font-size: 12px;
-  font-family: var(--main-family);
-  font-variation-settings: "wght" var(--font-weight-main);
+  
 }
 
 .main-article__title {
   padding: 7px 10px;
-  line-height: 100%;
+  line-height: 21.78px;
+  font-size: 18px;
+  font-family: var(--main-family);
+  font-variation-settings: "wght" var(--font-weight-main);
 }
 
 .center-image {
@@ -232,6 +232,7 @@ main {
   position: absolute;
   top: clamp(1.5625rem, 1.4165rem + 0.6231vw, 1.6876rem);
   right: clamp(1.4375rem, 1.2933rem + 0.6154vw, 1.5625rem);
+  color: var(--border-mode);
   font-size: 14px;
   font-family: var(--accent-family);
   font-weight: 400;
@@ -268,12 +269,12 @@ main {
   font-size: 18px;
   font-family: var(--main-family);
   font-variation-settings: "wght" var(--font-weight-second);
-  line-height: 121%;
 }
 
 .paragraph {
   max-width: 646px;
   width: 100%;
+  line-height: 21px;
 }
 
 .card__controls {
@@ -296,15 +297,11 @@ main {
   font-size: 14px;
   font-family: var(--accent-family);
   background-color: var(--background-color-mode);
-  color: var(--color-text-button);
   border: 2px solid var(--border-mode);
-  transition: box-shadow 0.3s ease, background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+  color: var(--color-text-button);
+  transition: box-shadow 0.3s ease;
   z-index: 1;
   cursor: pointer;
-}
-
-.button:hover {
-  color: var(--color-mode);
 }
 
 .button::before {
@@ -317,7 +314,6 @@ main {
   background-color: var(--before-color);
   transition: transform 0.5s ease-in-out;
   transform-origin: left;
-  mix-blend-mode: difference;
   transform: scaleX(0);
   z-index: -1;
 }
@@ -334,13 +330,14 @@ main {
   box-shadow: 2px 2px 0 var(--border-mode);
 }
 
+.button__text {
+  mix-blend-mode: difference;
+  line-height: 90%;
+}
+
 .card__like-button {
   width: 130px;
   height: 38px;
-}
-
-.button__text {
-  line-height: 90%;
 }
 
 .card__icon-button {
@@ -349,7 +346,7 @@ main {
   outline: 2px solid transparent;
   outline-offset: -4px;
   background-color: var(--background-header-title);
-  transition: color 0.3s ease, outline 0.3s ease;
+  transition: outline 0.3s ease;
 }
 
 .card__icon-button:focus {
@@ -361,10 +358,22 @@ main {
 }
 
 .heart {
-  transition: fill 0.3s ease;
   transform-origin: center;
+}
+
+.like-icon .contour {
   fill: var(--accent-color);
   transition: fill 0.1s linear;
+}
+
+.like-icon .main-body {
+  fill: transparent;
+  transition: fill 0.3s linear;
+}
+
+.like-icon .core {
+  fill: transparent;
+  transition: fill 0.3s linear 0.03s;
 }
 
 .like-icon:hover .core {
@@ -375,16 +384,6 @@ main {
 .like-icon:hover .main-body {
   fill: var(--accent-color);
   transition: fill 0.3s linear 0.05s;
-}
-
-.like-icon:not(:hover) .core {
-  fill: transparent;
-  transition: fill 0.03s linear;
-}
-
-.like-icon:not(:hover) .main-body {
-  fill: transparent;
-  transition: fill 0.3s linear;
 }
 
 .card__icon-button:active .core {
@@ -399,12 +398,7 @@ main {
 
 .like-icon.is-liked .contour {
   fill: var(--color-sparks);
-  transition: fill 0.06s linear;
-}
-
-.like-icon .contour {
-  fill: var(--color-theme);
-  transition: fill 0.1s linear;
+  transition: fill 0.3s linear 0.06s;
 }
 
 .like-icon.is-liked .main-body {
@@ -455,6 +449,7 @@ main {
 
 .disk-icon {
   position: relative;
+  mix-blend-mode: difference;
   width: 21px;
   height: 21px;
 }
@@ -472,7 +467,7 @@ main {
   height: 51px;
 }
 
-@media (width: 375px) {
+@media (width <= 375px) {
   .floppy__dialog {
       min-width: 39px;
   }
@@ -497,10 +492,6 @@ main {
       font-size: clamp(1.875rem, 1.8718rem + 5.0802vi, 3.0625rem);
   }
 
-  .second__title {
-      font-size: 14px;
-  }
-
   .title {
       max-width: 375px;
   }
@@ -520,7 +511,6 @@ main {
 
   .paragraph {
       max-width: 317.05px;
-      line-height: 21px;
   }
 
   .card__controls {
@@ -533,10 +523,7 @@ main {
   }
 
   .footer__button {
-      display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
       width: 306px;
       height: 84px;
   }

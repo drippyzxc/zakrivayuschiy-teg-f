@@ -16,15 +16,17 @@
     </head>
     <body class="page">
         <dialog class="dialog" id="myDialog">
+            <div class="modal-content">
+                 <svg class="floppy__dialog" viewBox="0 0 24 24">
+                    <use href="svg/floppy.svg#floppy"></use>
+                 </svg>
+                <p class="text__dialog">Вставьте дискету, чтобы продолжить</p>
+            </div>
             <form method="dialog">
-                <div class="modal-content">
-                    <svg class="floppy__dialog" viewBox="0 0 24 24">
-                        <use href="svg/floppy.svg#floppy"></use>
-                    </svg>
-                    <p class="text__dialog">Вставьте дискету, чтобы продолжить</p>
-                </div>
-                    <button class="button button__dialog" type="submit" onclick="window.myDialog.close()">Ок</button>
-            </form>
+                <button class="button button__dialog" type="submit" onclick="window.myDialog.close()">
+                    <span class="button__text">Ок</span>
+                </button>
+        </form>
         </dialog>
         <header class="header">
             <div class="header__item">
