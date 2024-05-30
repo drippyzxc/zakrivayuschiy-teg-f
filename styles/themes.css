@@ -27,8 +27,9 @@
     --background-header-title: #fff;
     --background-color-mode: #fff;
     --border-mode: #000;
+    --before-color: #000;
     --accent-color: #000;
-    --color-text-button: #000;
+    --color-text-button: #fff;
     --linear-gradient-start: #E7E7E7;
     --linear-gradient-end: #1A1A1A;
     --color-sparks: #FF0000;
